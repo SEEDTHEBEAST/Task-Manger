@@ -5,7 +5,7 @@ from pathlib import Path
 from  typing import List
 from .models import Task
 
-class Storage
+class Storage:
 
 def __init__(self, file_path: str = "tasks.json"):
     self.file_path = Path(file_path)
@@ -18,3 +18,7 @@ def __init__(self, file_path: str = "tasks.json"):
 
         pass
 
+def save_tasks(self, tasks: List[Task] -> None:
+     
+
+     pass
