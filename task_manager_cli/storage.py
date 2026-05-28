@@ -4,12 +4,35 @@ import json
 from pathlib import Path
 from  typing import List
 from .models import Task
+from datetime import datetime
 
 class Storage:
 
 def __init__(self, file_path: str = "tasks.json"):
     self.file_path = Path(file_path)
 
+
+def _task_to_dict(self, task: Task) -> dict:
+    "Convert a Task object to a dictionary for JSON serialization"
+    return {
+        "id: task.id,"
+        "description": task.taskBio,
+        "status": task.status.value,
+        "created_at":task.created_at.isoformat()
+
+    }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     def load_tasks(self) -> List[Task]:
 
        
