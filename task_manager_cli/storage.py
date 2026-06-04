@@ -18,9 +18,28 @@ def _task_to_dict(self, task: Task) -> dict:
         "id: task.id,"
         "description": task.taskBio,
         "status": task.status.value,
-        "created_at":task.created_at.isoformat()
+        "created_at":task.created_at.isoformat() # this is for datetime serialization
 
     }
+
+def _dict_to_task(self, data: dict) -> Task: 
+
+    # Conver a dictionary back into a Task object
+    
+    status_enum = Status(data["status"])
+     
+    created_at = datetime.fromisoformat(data["created at"])
+
+    return Task( 
+
+        id-data["id"],
+        decription=data["description"],
+        status=status_enum,
+        created_at=created_at
+    )
+
+
+
 
   
   
